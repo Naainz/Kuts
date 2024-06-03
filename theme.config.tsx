@@ -1,7 +1,14 @@
 import React from 'react'
 import { DocsThemeConfig } from 'nextra-theme-docs'
 
-const config: DocsThemeConfig = {
+
+export default {
+  useNextSeoProps() {
+    return {
+      titleTemplate: '%s – Kuts.club'
+    }
+  },
+  logo: <span>Kuts.club</span>,
   project: {
     link: 'https://github.com/Naainz/Kuts',
   },
@@ -9,9 +16,4 @@ const config: DocsThemeConfig = {
   footer: {
     text: '2024 © Kuts.club  |  Built with Nextra Documentation',
   },
-  useNextSeoProps() {
-    return {
-      titleTemplate: '%s – Kuts.club'
-    }
-  }
 }
