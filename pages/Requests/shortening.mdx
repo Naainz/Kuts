@@ -1,0 +1,20 @@
+# Shortening a URL
+
+To shorten a URL using the Kuts API, you can make a `GET` request to the `/short` endpoint with the following parameters:
+
+### Example
+
+```plaintext
+GET https://kuts.club/short?url=https://naai.nz
+```
+
+This will then return a HTML response with the shortened URL in the following format:
+    
+    ```html
+    <a href='https://kuts.club/g/qurGpm'>https://kuts.club/g/qurGpm</a>
+    ```
+
+You can extract the shortened URL from the response and use it in your application.
+#### Parameters
+
+- url: The URL you want to shorten. For example, https://naai.nz.

@@ -1,0 +1,30 @@
+# Viewing link info
+
+To view detailed information about a specific link, you can create a `GET` request to the `/info` endpoint with the following parameters:
+
+### Example
+```plaintext
+GET https://kuts.club/info?url=https://kuts.club/g/qurGpm
+```
+This will return a HTML response with the following information:
+
+```html
+Long URL: https://naai.nz<br>Short URL: https://kuts.club/g/qurGpm<br>Total Visits: 1<br>England: 1<br>
+```
+```html
+Long URL: https://naai.nz
+<br>
+Short URL: https://kuts.club/g/qurGpm
+<br>
+Total Visits: 1
+<br>
+England: 1
+<br>
+```
+You can extract the information from the response and use it in your application.
+
+#### Parameters
+
+- url: The shortened URL you want to get information about. For example, https://kuts.club/g/qurGpm.
+
+Alternatively, you can add a `+` to the end of the Kuts.club link, like so: https://kuts.club/g/qurGpm+ to view the same information.
