@@ -12,7 +12,7 @@ export default {
   project: {
     link: 'https://github.com/Naainz/Kuts',
   },
-  docsRepositoryBase: 'https://github.com/Naainz/Kuts',
+  docsRepositoryBase: 'https://github.com/Naainz/Kuts/tree/main/pages',
   footer: {
     text: '2024 © Kuts.club  |  Built with Nextra Documentation',
   },
