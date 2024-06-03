@@ -18,3 +18,26 @@ You can extract the shortened URL from the response and use it in your applicati
 #### Parameters
 
 - url: The URL you want to shorten. For example, https://naai.nz.
+
+
+## Use of custom slugs
+
+You can also use custom slugs for your shortened URLs, provided that the slug is not already taken, and it is between 7 and 15 characters. To do this, you can make a `GET` request to the `/short` endpoint with the following parameters:
+
+### Example
+
+```plaintext
+GET https://kuts.club/short?url=https://naai.nz&slug=naainz
+```
+
+This will then return a HTML response with the shortened URL in the following format:
+    
+    ```html
+    https://kuts.club/g/naainz
+    ```
+
+#### Parameters
+
+- url: The URL you want to shorten. For example, https://naai.nz.
+- slug: The custom slug you want to use. For example, naainz.
+
