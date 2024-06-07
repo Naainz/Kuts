@@ -14,7 +14,7 @@ export default {
         />
       </>
     )
-  }
+  },
   useNextSeoProps() {
     return {
       titleTemplate: '%s – Kuts.club'
