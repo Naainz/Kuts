@@ -4,7 +4,6 @@ import { DocsThemeConfig } from 'nextra-theme-docs'
 
 export default {
   head: () => {
-    const { asPath, defaultLocale, locale } = useRouter()
     const { frontMatter } = useConfig()
     const url =
       'https://kuts.club' +
