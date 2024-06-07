@@ -3,13 +3,24 @@ import { DocsThemeConfig } from 'nextra-theme-docs'
 
 
 export default {
-  head: (
-    <>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta property="og:title" content="Kuts.club" />
-      <meta property="og:description" content="The best URL Shortener out there." />
-    </>
-  )
+  head: () => {
+    const { asPath, defaultLocale, locale } = useRouter()
+    const { frontMatter } = useConfig()
+    const url =
+      'https://kuts.club' +
+      (defaultLocale === locale ? asPath : `/${locale}${asPath}`)
+ 
+    return (
+      <>
+        <meta property="og:url" content={url} />
+        <meta property="og:title" content={frontMatter.title || 'Kuts.club'} />
+        <meta
+          property="og:description"
+          content={frontMatter.description || 'The best URL Shortener out there.'}
+        />
+      </>
+    )
+  }
   useNextSeoProps() {
     return {
       titleTemplate: '%s – Kuts.club'
